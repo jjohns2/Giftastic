@@ -12,27 +12,28 @@
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src='assets/javascript/game.js'></script>
     <link rel='stylesheet' type='text/css' media='screen' href='assets/css/reset.css'>
     <link rel='stylesheet' type='text/css' media='screen' href='assets/css/stylesheet.css'>
 
 </head>
 
 <body>
+        <h1>Animal Gif Generator</h1>
     <!-- create a div in the DOM to store buttons -->
-    <div id="animalButtons"></div>
+    <div id="animalButtons" class="animalclassbuttons"></div>
+
 
     <!-- create a form to let the user add an animal -->
     <form>
         <div class="form-group">
             <label for="animalInput">Add an Animal</label>
-            <input type="text" class="form-control" id="addAnimalinput" placeholder="cat">
+            <input type="text" class="form-control" id="animalInput" placeholder="cat">
         </div>
     </form>
 
     <!-- Button to submit the added animal
     By clicking this button, anything button should be added in store buttons div -->
-    <button type="button" class="btn btn-outline-dark" id="submitAnimal">Submit</button>
+    <button type="button" class="btn-dark" id="submitAnimal">Submit</button>
     <script src='assets/javascript/game.js'></script>
 
     <div id="gifsgohere"></div>
