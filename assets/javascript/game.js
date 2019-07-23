@@ -44,7 +44,7 @@ $(document).on("click", ".animaltime", function () {
             var animalDiv = $("<div>");
 
             //create variable and DOM location for rating
-            var rating = $("<p>").text("Rating: " + results[m].rating);
+            var rating = $("<p class='rating'>").text("Rating: " + results[m].rating);
             var animalImg = $("<img>");
 
             //create variable and DOM location for gif
@@ -57,6 +57,9 @@ $(document).on("click", ".animaltime", function () {
             //creating attr for still gif
             animalImg.attr("data-state", "still");
             animalImg.attr('class', 'gifs');
+            animalImg.addClass("img-fluid");
+            animalImg.addClass("column");
+            
 
             //append rating
             animalDiv.append(rating);
@@ -102,6 +105,7 @@ $("#animalInput").keypress(function (e) {
         var inputAnimal = $("#animalInput").val();
         animals.push(inputAnimal);
         createButtons();
+        $('#animalInput').html("");
         return false;
     }
 });

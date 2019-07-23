@@ -4,7 +4,7 @@
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Page Title</title>
+    <title>GifTastic Animals</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -14,29 +14,45 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <link rel='stylesheet' type='text/css' media='screen' href='assets/css/reset.css'>
     <link rel='stylesheet' type='text/css' media='screen' href='assets/css/stylesheet.css'>
+    <link href="https://fonts.googleapis.com/css?family=Lato|Permanent+Marker|Zilla+Slab&display=swap" rel="stylesheet">
 
 </head>
 
 <body>
-        <h1>Animal Gif Generator</h1>
+
     <!-- create a div in the DOM to store buttons -->
-    <div id="animalButtons" class="animalclassbuttons"></div>
+    <div class="container">
+        <h1>Animal Gif Generator</h1>
+
+        <div class="row">
+            <div class="col-md-8">
+        <div id="animalButtons" class="animalclassbuttons"></div>
+    </div>
 
 
-    <!-- create a form to let the user add an animal -->
-    <form>
-        <div class="form-group">
-            <label for="animalInput">Add an Animal</label>
-            <input type="text" class="form-control" id="animalInput" placeholder="cat">
+
+        <!-- create a form to let the user add an animal -->
+        <div class="col-md-4">
+            <form>
+                <div class="form-group">
+                    <label for="animalInput">Add an Animal</label>
+                    <input type="text" class="form-control" id="animalInput" placeholder="add an animal here">
+                </div>
+            </form>
+
+            <button type="button" class="btn-dark" id="submitAnimal">Submit</button>
         </div>
-    </form>
+        </div>
 
-    <!-- Button to submit the added animal
+        <!-- Button to submit the added animal
     By clicking this button, anything button should be added in store buttons div -->
-    <button type="button" class="btn-dark" id="submitAnimal">Submit</button>
-    <script src='assets/javascript/game.js'></script>
 
-    <div id="gifsgohere"></div>
+
+        <script src='assets/javascript/game.js'></script>
+        <div class="row">
+            <div id="gifsgohere" class="gifspositioning"></div>
+        </div>
+    </div>
 </body>
 
 </html>
